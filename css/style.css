@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+body {
+  font-family: Barlow, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.button-link, .intro-primary span {
+  text-transform: uppercase;
+}
+
+.button-link, span {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 32px 0 0 0;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p, .intro-primary span, footer {
+  color: #7b8bad;
+}
+
+p {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3 {
+  color: #162441;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 24px 50px 24px;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+header .button-link {
+  background-color: #e8eff2;
+  color: #162441;
+}
+
+.intro-primary .button-link {
+  background-color: #f26818;
+  color: white;
+  margin-right: 1em;
+}
+
+.intro-primary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  padding: 0 24px;
+}
+.intro-primary picture {
+  margin-right: -24px;
+}
+.intro-primary img {
+  border-radius: 20px 0 0 20px;
+  width: 100%;
+}
+.intro-primary p {
+  margin-bottom: 2em;
+  margin-left: 0;
+}
+
+.intro-secondary {
+  display: grid;
+  grid-template: repeat(3, auto)/1fr 3fr;
+  column-gap: 24px;
+  text-align: center;
+  margin: 24px 0;
+  padding: 0 24px;
+}
+.intro-secondary h2 {
+  grid-row: 2;
+  grid-column: span 2;
+  margin-top: 3em;
+}
+.intro-secondary p {
+  grid-row: 3;
+  grid-column: span 2;
+}
+.intro-secondary > picture img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  margin-left: -24px;
+  grid-area: 1/1/2/2;
+  background-image: url("../assets/mobile/image-phone-and-keyboard.jpg");
+  background-color: #f26818;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0.9;
+}
+
+.overlay + picture {
+  grid-column: 2;
+}
+
+.features {
+  display: grid;
+  row-gap: 64px;
+  margin: 96px 24px 96px 24px;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  background-color: #f26818;
+  padding: 16px;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    margin: 0 48px 40px 48px;
+  }
+
+  .intro-primary {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 64px;
+    padding: 0 48px;
+  }
+  .intro-primary picture {
+    margin-right: -48px;
+  }
+  .intro-primary h1 {
+    margin-top: 0;
+  }
+  .intro-primary img {
+    height: 425px;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .intro-secondary {
+    margin: 48px 0;
+    padding: 0 48px;
+    grid-template-rows: 320px auto;
+    row-gap: 72px;
+    text-align: left;
+  }
+  .intro-secondary > picture img {
+    object-fit: cover;
+  }
+  .intro-secondary h2 {
+    grid-column: 1/2;
+    margin: 0;
+  }
+  .intro-secondary p {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .overlay {
+    background-image: url("../assets/tablet/image-phone-and-keyboard.jpg");
+    margin-left: -48px;
+  }
+
+  .features {
+    margin: 96px 48px 96px 48px;
+    grid-template: 1fr 1fr/auto auto;
+    column-gap: 64px;
+  }
+  .features p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .intro-secondary {
+    grid-template: auto auto/1fr 2fr 2fr;
+    row-gap: 24px;
+    height: 320px;
+  }
+  .intro-secondary picture {
+    grid-row: span 2;
+  }
+  .intro-secondary h2 {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+  }
+  .intro-secondary p {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: start;
+    justify-self: start;
+  }
+  .intro-secondary h2, .intro-secondary p {
+    max-width: 300px;
+    justify-self: center;
+  }
+
+  .overlay {
+    grid-row: span 2;
+  }
+
+  header .button-link {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  header .button-link:hover {
+    background-color: #162441;
+    color: white;
+  }
+
+  .intro-primary .button-link {
+    transition: background-color 0.3s;
+  }
+  .intro-primary .button-link:hover {
+    background-color: #ff9b61;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .intro-primary {
+    padding: 0;
+    position: relative;
+  }
+  .intro-primary h1 {
+    font-size: 3.5rem;
+  }
+  .intro-primary::after {
+    content: "";
+    position: absolute;
+    background-color: #e8eff2;
+    border-radius: 20px 0 0 20px;
+    height: 240px;
+    width: 100%;
+    left: calc(100% + 24px);
+    top: 0;
+  }
+  .intro-primary picture {
+    margin: 0;
+    flex-basis: 50%;
+  }
+  .intro-primary picture img {
+    border-radius: 20px;
+    height: 480px;
+  }
+
+  .intro-secondary {
+    padding: 0;
+    position: relative;
+    height: 480px;
+  }
+  .intro-secondary::before {
+    content: "";
+    position: absolute;
+    background-color: #e8eff2;
+    border-radius: 0 20px 20px 0;
+    height: 240px;
+    width: 100%;
+    right: calc(100% + 24px);
+    bottom: 0;
+  }
+
+  .overlay {
+    margin: 0;
+    border-radius: 20px;
+    background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
+  }
+
+  .features {
+    grid-template: auto/repeat(4, auto);
+    column-gap: 32px;
+  }
+  .features h3 {
+    width: 180px;
+  }
+
+  body {
+    max-width: 80%;
+    margin: 24px auto auto;
+  }
+
+  header, .features {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

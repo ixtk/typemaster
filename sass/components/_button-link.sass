@@ -1,0 +1,33 @@
+@use '../abstracts/variables'
+
+.button-link
+  display: inline-block
+  padding: 1em
+  border-radius: 8px
+  text-decoration: none
+
+header
+  .button-link
+    background-color: variables.$light-gray
+    color: variables.$dark-blue
+
+.intro-primary
+  .button-link
+    background-color: variables.$orange
+    color: variables.$white
+    margin-right: 1em
+
+@mixin laptop
+  header
+    .button-link
+      transition: background-color 0.3s, color 0.3s
+
+      &:hover
+        background-color: variables.$dark-blue
+        color: variables.$white
+
+  .intro-primary
+    .button-link
+      transition: background-color 0.3s
+      &:hover
+        background-color: variables.$light-orange

@@ -1,0 +1,40 @@
+@use '../abstracts/variables'
+
+.features
+  display: grid
+  row-gap: 64px
+  margin: 96px 24px 96px 24px
+  justify-content: center
+
+.card
+  text-align: center
+
+.icon
+  display: inline-block
+  background-color: variables.$orange
+  padding: 16px
+  width: 65px
+  height: 65px
+  object-fit: contain
+  border-radius: 16px
+  
+@mixin tablet
+  .features
+    margin: 96px 48px 96px 48px
+    grid-template: 1fr 1fr / auto auto
+    column-gap: 64px
+
+    p
+      margin-left: 0
+      margin-right: 0
+
+  .card
+    text-align: left
+
+@mixin desktop
+  .features
+    grid-template: auto / repeat(4, auto)
+    column-gap: 32px
+
+    h3
+      width: 180px

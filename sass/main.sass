@@ -1,0 +1,32 @@
+@use './abstracts/typeography'
+@use './abstracts/general'
+
+@use './components/header'
+@use './components/button-link'
+@use './components/intro-primary'
+@use './components/intro-secondary'
+@use './components/features'
+@use './components/footer'
+
+@media only screen and(min-width: 768px)
+  @include header.tablet
+  @include intro-primary.tablet
+  @include intro-secondary.tablet
+  @include features.tablet
+
+@media only screen and(min-width: 1000px)
+  @include intro-secondary.laptop
+  @include button-link.laptop
+
+@media only screen and(min-width: 1300px)
+  @include intro-primary.desktop
+  @include intro-secondary.desktop
+  @include features.desktop
+
+  body
+    max-width: 80%
+    margin: 24px auto auto
+
+  header, .features
+    margin-left: 0
+    margin-right: 0
