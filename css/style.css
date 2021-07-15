@@ -187,6 +187,7 @@ footer {
   }
   .intro-primary picture {
     margin-right: -48px;
+    flex-basis: 60%;
   }
   .intro-primary h1 {
     margin-top: 0;
@@ -239,6 +240,10 @@ footer {
   }
 }
 @media only screen and (min-width: 1000px) {
+  .intro-primary picture {
+    flex-basis: 50%;
+  }
+
   .intro-secondary {
     grid-template: auto auto/1fr 2fr 2fr;
     row-gap: 24px;
@@ -302,7 +307,6 @@ footer {
   }
   .intro-primary picture {
     margin: 0;
-    flex-basis: 50%;
   }
   .intro-primary picture img {
     border-radius: 20px;

@@ -27,6 +27,7 @@
 
     picture
       margin-right: -48px
+      flex-basis: 60%
 
     h1
       margin-top: 0
@@ -35,6 +36,11 @@
       height: 425px
       object-fit: cover
       object-position: left center
+
+@mixin laptop
+  .intro-primary
+    picture
+      flex-basis: 50%
 
 @mixin desktop
   .intro-primary
@@ -56,7 +62,6 @@
 
     picture
       margin: 0
-      flex-basis: 50%
 
       img
         border-radius: 20px
